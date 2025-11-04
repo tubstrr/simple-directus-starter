@@ -11,4 +11,12 @@ RUN npm install
 # Copy source code
 COPY ./src/nuxt ./
 
-EXPOSE 8080
+# Build the app.
+RUN npm run build
+
+# Copy files to the container image.
+COPY --from=build /app ./
+
+# EXPOSE 8080
+# Serve the app
+CMD ["npm", "run", "start"]
