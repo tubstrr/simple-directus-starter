@@ -12,5 +12,3 @@ RUN npm install
 COPY ./src/nuxt ./
 
 EXPOSE 8080
-
-CMD ["npx", "nuxi", "build"]
