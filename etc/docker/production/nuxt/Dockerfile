@@ -22,4 +22,4 @@ RUN npm run build
 # COPY --from=build /app ./
 
 # Serve the app
-CMD ["npm", "run", "start"]
+CMD ["npx", "nuxi", "start"]
