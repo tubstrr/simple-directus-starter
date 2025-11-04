@@ -29,8 +29,8 @@ services:
 
   directus:
     build:
-      context: ../../src/directus
-      dockerfile: ../../etc/docker/directus/Dockerfile
+      context: ../../
+      dockerfile: etc/docker/directus/Dockerfile
     ports:
       - ${DIRECTUS_PORT}:8055
     volumes:
@@ -89,8 +89,8 @@ services:
 
   nuxt:
     build:
-      context: ../../src/nuxt
-      dockerfile: ../../etc/docker/nuxt/Dockerfile
+      context: ../../
+      dockerfile: etc/docker/nuxt/Dockerfile
     volumes:
       - ../../src/nuxt:/app
       - /app/node_modules

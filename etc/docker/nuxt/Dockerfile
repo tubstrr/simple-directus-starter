@@ -3,7 +3,7 @@ FROM node:24-alpine
 WORKDIR /app
 
 # Copy package files first for better caching
-COPY package*.json ./
+COPY src/nuxt/package.json ./
 
 # Install dependencies
 RUN npm install 
