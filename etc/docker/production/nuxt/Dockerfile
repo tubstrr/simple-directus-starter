@@ -1,4 +1,5 @@
-FROM node:24-alpine
+# FROM node:24-alpine
+FROM node:lts-alpine AS build
 
 WORKDIR /app
 
