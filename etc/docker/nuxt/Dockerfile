@@ -9,7 +9,7 @@ COPY src/nuxt/package.json ./
 RUN npm install 
 
 # Copy source code
-COPY . .
+COPY ./src/nuxt ./
 
 EXPOSE 3000
 EXPOSE 8080
