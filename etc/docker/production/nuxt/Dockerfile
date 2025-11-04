@@ -18,8 +18,8 @@ COPY /src/nuxt ./
 # Build the app.
 RUN npm run build
 
-# Copy files to the container image.
-COPY --from=build /app ./
+# # Copy files to the container image.
+# COPY --from=build /app ./
 
 # Serve the app
 CMD ["npm", "run", "start"]
