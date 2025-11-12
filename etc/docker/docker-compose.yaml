@@ -30,7 +30,7 @@ services:
   directus:
     build:
       context: ../../
-      dockerfile: etc/docker/directus/Dockerfile
+      dockerfile: etc/docker/development/directus/Dockerfile
     ports:
       - ${DIRECTUS_PORT}:8055
     volumes:
@@ -90,7 +90,7 @@ services:
   nuxt:
     build:
       context: ../../
-      dockerfile: etc/docker/nuxt/Dockerfile
+      dockerfile: etc/docker/development/nuxt/Dockerfile
     volumes:
       - ../../src/nuxt:/app
       - /app/node_modules
@@ -99,6 +99,6 @@ services:
     environment:
       NUXT_HOST: 0.0.0.0
       NUXT_PORT: 3000
-      DIRECTUS_URL: http://directus:8055
+      NUXT_PUBLIC_DIRECTUS_URL: ${PUBLIC_URL}
     depends_on:
       - directus

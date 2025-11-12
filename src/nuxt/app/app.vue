@@ -1,6 +1,9 @@
+<script setup>
+const toaster = { position: "bottom-right" };
+</script>
+
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <UApp :toaster="toaster">
+    <NuxtPage />
+  </UApp>
 </template>
